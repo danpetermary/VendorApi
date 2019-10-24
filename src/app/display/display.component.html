@@ -1,0 +1,26 @@
+<h1 style="color:bisque">Previous Matches</h1>
+<form #f="ngForm">
+<div>
+<mat-card class="previous-card" *ngFor="let match of previousMatches">
+
+        <mat-card-content>
+                <mat-card-title > {{match["team-1"]}} </mat-card-title>
+                <p><b>Vs</b></p>
+        </mat-card-content>         
+             
+       
+        <mat-card-content>
+            <mat-card-title >  {{match["team-2"]}} </mat-card-title>
+            <p><b>Vs</b></p>
+    </mat-card-content>   
+
+
+ 
+ <mat-card-footer>
+     <button  class="previousAddButton" mat-button color="accent" (click)="addToFavouriteList(match)">Add To Favorites  <i class="fa fa-star" aria-hidden="true"></i></button>
+     <button  class="addButton" mat-button color="accent" (click)="addToRecomndedList(match)">Add To Recomnded  <i class="fa fa-star" aria-hidden="true"></i></button>
+ </mat-card-footer>
+</mat-card>
+<br>
+</div>
+</form>
